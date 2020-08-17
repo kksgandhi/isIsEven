@@ -10,7 +10,6 @@ public class IsIsEven {
                 Predicate<Integer> workingIsEven = (i) -> (i % 2 == 0);
                 return IntStream
                         .range(Integer.MIN_VALUE, Integer.MAX_VALUE)
-                        .parallel()
                         .allMatch((i) -> maybeIsEven.test(i) == workingIsEven.test(i));
         }
 }
